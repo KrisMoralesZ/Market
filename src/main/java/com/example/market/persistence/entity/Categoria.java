@@ -14,6 +14,8 @@ public class Categoria {
     private String descripcion;
     private Boolean estado;
 
+    @OneToMany(mappedBy = "categoria")
+
     public Integer getIdCategoria() {
         return idCategoria;
     }

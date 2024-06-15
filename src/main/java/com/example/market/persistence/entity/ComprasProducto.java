@@ -12,6 +12,14 @@ public class ComprasProducto {
     private Double total;
     private Boolean estado;
 
+    @ManyToMany
+    @JoinColumn(name = "id_compra", insertable = false, updatable = false)
+    private Compra compra;
+
+    @ManyToMany
+    @JoinColumn(name = "id_producto", insertable = false, updatable = false)
+    private Producto producto;
+
     public ComprasProductoPK getId() {
         return id;
     }
